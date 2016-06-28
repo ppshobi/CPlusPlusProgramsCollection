@@ -15,6 +15,6 @@ int main ()
   cout << "Value of pvalue : " << *pvalue << endl;
   // free up the memory.
   delete pvalue;
-  getch():
+  getch();
   return 0;
 }

@@ -1,31 +1,21 @@
 #include <iostream.h>
 #include <conio.h>
-
-class Box
-{
+class Box{
    public:
-
-      double getVolume(void)
-      {
+      double getVolume(void){
          return length * breadth * height;
       }
-      void setLength( double len )
-      {
+      void setLength( double len ){
           length = len;
       }
-
-      void setBreadth( double bre )
-      {
+      void setBreadth( double bre ){
           breadth = bre;
       }
-
-      void setHeight( double hei )
-      {
+      void setHeight( double hei ){
           height = hei;
       }
       // Overload + operator to add two Box objects.
-      Box operator+(const Box& b)
-      {
+      Box operator+(const Box& b){
          Box box;
          box.length = this->length + b.length;
          box.breadth = this->breadth + b.breadth;
@@ -38,8 +28,11 @@ class Box
       double height;      // Height of a box
 };
 // Main function for the program
-void main( )
-{
+int main(){
+   clrscr();
+   cout<<"\n===========================================\n";
+   cout<<"Program to Demonstrate Operator Overloading";
+   cout<<"\n===========================================\n";
    Box Box1;                // Declare Box1 of type Box
    Box Box2;                // Declare Box2 of type Box
    Box Box3;                // Declare Box3 of type Box
@@ -69,5 +62,6 @@ void main( )
    // volume of box 3
    volume = Box3.getVolume();
    cout << "Volume of Box3 : " << volume <<endl;
-
+   getch();
+   return 0;
 }
