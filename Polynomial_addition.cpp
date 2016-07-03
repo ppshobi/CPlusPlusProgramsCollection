@@ -1,7 +1,6 @@
 #include<iostream.h>
 #include<conio.h>
-class poly
-{
+class poly{
 	struct term
 	{
 		int coeff;
@@ -14,17 +13,15 @@ class poly
 	void display();
 	void add(poly,poly);
 };
- poly::poly()
-	{
+poly::poly(){
 		n=0;
 		for(int i=0;i<100;i++)
 		{
 			t[i].coeff=0;
 			t[i].exp=0;
 		}
-	}
-void poly::create()
-{
+}
+void poly::create(){
 	cout<<"\nEnter no of terms in the  polynomial:";
 	cin>>n;
             cout<<"\nEnter the elements of the polynomial:";
@@ -34,11 +31,9 @@ void poly::create()
 		cin>>t[i].exp;
 	}
 }
-void poly::display()
-{
+void poly::display(){
 	int flag=0;
-	for(int i=0;i<n;i++)
-	{
+	for(int i=0;i<n;i++){
 		if(t[i].exp!=0)
 		cout<<t[i].coeff<<"X^"<<t[i].exp<<"+";
 		else
@@ -50,37 +45,29 @@ void poly::display()
 	if(flag==0)
 	cout<<"\b\b\b\b\b";
 }
-void poly::add(poly p1,poly p2)
-{
+void poly::add(poly p1,poly p2){
 	int l=p1.n+p2.n;
 	int i,j;
-	for( i=0, j=0;n<l;n++)
-	{
+	for( i=0, j=0;n<l;n++){
 		if((p1.t[i].coeff==0)&&(p2.t[j].coeff==0))
 		break;
-		if(p1.t[i].exp>p2.t[j].exp)
-		{
+		if(p1.t[i].exp>p2.t[j].exp){
 			t[n].coeff=p1.t[i].coeff;
 			t[n].exp=p1.t[i].exp;
 			i++;
-		}
-		else if(p1.t[i].exp==p2.t[j].exp)
-		{
+		}else if(p1.t[i].exp==p2.t[j].exp){
 			t[n].coeff=p1.t[i].coeff+p2.t[j].coeff;
 			t[n].exp=p1.t[i].exp;
 			i++;
 			j++;
-		}
-		else
-		{
+		}else{
 			t[n].coeff=p2.t[j].coeff;
 			t[n].exp=p2.t[j].exp;
 			j++;
 		}
 	}
 }
-void main()
-{
+void main(){
 	poly p1,p2,p3;
 	clrscr();
 	cout<<"\n First polynomial....";
