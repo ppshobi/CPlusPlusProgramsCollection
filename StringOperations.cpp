@@ -1,6 +1,6 @@
 #include <iostream.h>
 #include <string.h>
-
+#include <conio.h>
 int main ()
 {
   char str1[10] = "Hello";
@@ -8,7 +8,6 @@ int main ()
   char str3[10];
   int  len, cmpresult ;
   clrscr();
-
   cout<<"\n=====================================\n";
   cout<<"Program to Demonstrate String Functions\n";
   cout<<"\n=====================================\n";
