@@ -7,6 +7,7 @@ public:
    	constructors();
    	constructors(int);
    	constructors(const constructors &obj);
+   	~constructors();
 };
 
 constructors::constructors(){
