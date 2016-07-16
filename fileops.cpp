@@ -6,7 +6,7 @@ int main ()
    char data[100];
    clrscr();
    cout<<"\n=====================================\n";
-   cout<<"Program to Demonstrate File Operations\n";
+   cout<<"Program to Demonstrate File Operations";
    cout<<"\n=====================================\n";
    // open a file in write mode.
    ofstream outfile;
